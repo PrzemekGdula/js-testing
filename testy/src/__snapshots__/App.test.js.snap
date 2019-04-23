@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Objects with snapshots Testing snapshot parameter matchers 1`] = `
+Object {
+  "name": Any<String>,
+  "newProperty": Any<Boolean>,
+  "stydying": false,
+  "surname": Any<String>,
+}
+`;
