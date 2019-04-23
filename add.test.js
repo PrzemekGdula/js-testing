@@ -23,4 +23,4 @@ console.log('Funkcja zwraca 0 dla literek')
 if (add(0.2, 0.4) !== 0.6 || add(0.1, 0.01) !== 0.11) {
     throw new Error('Błąd dodawania liczb zmiennoprzecinkowych')
 }
-console.log('Dodawanie liczb zmiennoprzecinkowych działa')
+console.log('Dodawanie liczb zmiennoprzecinkowych działa do 3 miejsc po przecinku')
