@@ -1,10 +1,12 @@
-const sumOrderPrice = (order) => 0;
+const sumOrderPrice = (order) => order.reduce(
+    (priceSum, order, i, arr) => {
+        return priceSum + order.price
+    }, 0);
 
 const testOrder1 = [
     { name: 'Żwirek dla kota', price: 100 },
     { name: 'Sok pomarańczowy', price: 4 }
 ]
-
 if (sumOrderPrice(testOrder1) !== 104) {
     throw new Error('Simple order sum not working')
 }
