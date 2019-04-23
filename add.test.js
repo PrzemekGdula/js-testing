@@ -1,4 +1,4 @@
-const add = (a, b) => (Number(a) && Number(b)) ? Number(a) + Number(b) : 0;
+const add = (a, b) => (Number(a) && Number(b)) ? Math.round((Number(a) + Number(b))*1000)/1000 : 0;
 if (add(2, 5) !== 7
 || add(2,10) !== 12
 || add(0,0) !== 0) {
@@ -17,7 +17,7 @@ if (add('ala', 'ma kota') !== 0 || add('ala', 5) !== 0) {
 }
 console.log('Funkcja zwraca 0 dla literek')
 
-// if (add(0.2, 0.4) !== 0.6 || add(0.1, 0.01) !== 0.11) {
-    // throw new Error('Błąd dodawania liczb zmiennoprzecinkowych')
-// }
-// console.log('Dodawanie liczb zmiennoprzecinkowych działa')
+if (add(0.2, 0.4) !== 0.6 || add(0.1, 0.01) !== 0.11) {
+    throw new Error('Błąd dodawania liczb zmiennoprzecinkowych')
+}
+console.log('Dodawanie liczb zmiennoprzecinkowych działa')
