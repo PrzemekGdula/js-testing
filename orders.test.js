@@ -1,6 +1,6 @@
 const sumOrderPrice = (order) => order.reduce(
-    (priceSum, order, i, arr) => {
-        return priceSum + order.price
+    (priceSum, product, i, arr) => {
+        return priceSum + product.price * (product.quantity || 1)
     }, 0);
 
 const testOrder1 = [
