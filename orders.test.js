@@ -1,5 +1,8 @@
 const sumOrderPrice = (order) => order.reduce(
     (priceSum, product, i, arr) => {
+        if(product.name === 'shipment' && priceSum > 100){
+            return priceSum
+        }
         return priceSum + product.price * (product.quantity || 1)
     }, 0);
 
