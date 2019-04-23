@@ -1,12 +1,4 @@
-const add = (a, b) => {
-    const aToNumber = Number(a)
-    const bToNumber = Number(b)
-    if (aToNumber && bToNumber) {
-        return aToNumber + bToNumber
-    }
-    return 0
-}
-
+const add = (a, b) => (Number(a) && Number(b)) ? Number(a) + Number(b) : 0;
 if (add(2, 5) !== 7
 || add(2,10) !== 12
 || add(0,0) !== 0) {
