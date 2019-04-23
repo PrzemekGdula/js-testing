@@ -1,6 +1,5 @@
 const sumOrderPrice = (order) => order.reduce(
     (priceSum, product, i, arr) => {
-
         if (product.name === 'shipment' && (sumOrderPrice(arr.slice(i + 1, arr.length)) + priceSum) > 100) {
             return priceSum
         }
@@ -56,11 +55,12 @@ if (sumOrderPrice(testOrder5) !== 132) {
 console.log('---\nZamówienie z przesyłką za ponizej 100 ma płatną przesyłkę\n---\n\n')
 
 const testOrder6 = [
+    { name: 'Sok jabłkowy', price: 10, quantity: 3 },
     { name: 'shipment', price: 120 },
     { name: 'Żwirek dla kota', price: 100 },
     { name: 'Sok pomarańczowy', price: 4, quantity: 3 }
 ]
-if (sumOrderPrice(testOrder6) !== 112) {
+if (sumOrderPrice(testOrder6) !== 142) {
     throw new Error('Order with shimpent and value above 100 has free shipment')
 }
 console.log('---\nZamówienie z przesyłką za powyzej 100 ma darmową przesyłkę bez względu na kolejność\n---\n\n')
